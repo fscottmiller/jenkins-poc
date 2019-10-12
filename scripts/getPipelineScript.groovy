@@ -1,6 +1,6 @@
 import groovy.text.SimpleTemplateEngine
 
-Class GetScript {
+class GetScript {
     static void fixData(data) {
         println "---- function fixParams -----"
         for (i in data) {
