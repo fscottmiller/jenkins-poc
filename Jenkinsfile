@@ -1,3 +1,5 @@
+@Library('poc@dev') _
+
 pipeline {
     agent any
 
@@ -7,13 +9,7 @@ pipeline {
                 script {
                     def yaml = readYaml file: 'config.yaml'
                     for (project in yaml.keySet()) {
-                        jobDsl targets: ['jobs/*.groovy'].join('\n'), 
-                            additionalParameters: [
-                                project: project, 
-                                data: yaml[project]
-                            ],
-                            removedJobAction: 'DELETE',
-                            removedViewAction: 'DELETE'
+                        makeJobs(project, yaml[project])
                     }
                 }
             }
