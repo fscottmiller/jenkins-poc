@@ -10,7 +10,7 @@ def fixData(data) {
     for (i in data) {
         if (i.value instanceof Map) {
             println "Iterating ${i.key}..."
-            fixData(i)
+            fixData(i.value)
         } else if (i.value instanceof Collection) {
             println "Fixing collection values"
             i.value = i.value.collect{ "'$it'" }
