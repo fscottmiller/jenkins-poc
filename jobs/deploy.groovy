@@ -9,7 +9,7 @@ def fixParams(data) {
     println "---- function fixParams -----"
     println data.getClass()
     if (data instanceof Collection) {
-        println "Iterating through ${data}..."
+        println "Iterating..."
         // fixParams(i.value)
     }
 }
