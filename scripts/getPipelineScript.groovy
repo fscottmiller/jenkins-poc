@@ -23,4 +23,4 @@ def getPipelineScript(String file, LinkedHashMap vars) {
     return script
 }
 
-return this
+println binding.getVariables()
