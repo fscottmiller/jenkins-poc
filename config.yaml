@@ -1,5 +1,8 @@
 Sample:
   repository: https://github.com/fscottmiller/jenkins-poc
+  build:
+    tool: npm
+    version: latest
   environments:
     - DEV
     - QA

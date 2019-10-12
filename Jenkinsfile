@@ -7,12 +7,10 @@ pipeline {
                 script {
                     def yaml = readYaml file: 'config.yaml'
                     for (project in yaml.keySet()) {
-                        println "----- ${project} builing -----"
                         jobDsl targets: ['jobs/*.groovy'].join('\n'), 
                             additionalParameters: [
                                 project: project, 
-                                environments: yaml[project]['environments'], 
-                                repository: yaml[project]['repository']
+                                data: yaml[project]
                             ],
                             removedJobAction: 'DELETE',
                             removedViewAction: 'DELETE'

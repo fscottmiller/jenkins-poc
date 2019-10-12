@@ -10,7 +10,6 @@ pipeline {
     parameters {
         choice name: "ENVIRONMENT", choices: ${environments}
         string name: "BRANCH", defaultValue: "master"
-        // gitParameter name: 'BRANCH', branchFilter: 'origin/(.*)', defaultValue: 'master', type: 'PT_BRANCH', useRepository: "${repository}"
     }
     stages {
         stage('Deploy') {

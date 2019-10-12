@@ -1,24 +1,15 @@
-import groovy.text.SimpleTemplateEngine
+def getScript = evaluate(readFileFromWorkspace("scripts/getPipelineScript.groovy"))
 
-println "building build job..."
-
-def jfile = readFileFromWorkspace "pipelines/build.groovy"
-def vars = binding.getVariables()
-
-for (i in vars) {
-    if (i.value instanceof Collection) {
-        i.value = i.value.collect{ "'$it'" }
-    }
-}
-
-def engine = new SimpleTemplateEngine()
-template = engine.createTemplate(jfile).make(vars).toString()
+def file = readFileFromWorkspace("pipelines/build.groovy")
+def pipelineScript = getScript(file, binding.getVariables()['data'])
 
 pipelineJob("${project}-Build") {
     displayName('Build')
     definition {
         cps { 
-            script(template)
+            script(pipelineScript)
         }
     }
 }
+
+
