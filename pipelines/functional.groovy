@@ -6,10 +6,14 @@ pipeline {
         string name: "BRANCH", defaultValue: "master"
     }
     stages {
-        stage('Deploy') {
+        stage('Test') {
             steps {
-                echo "Deployment type: "
-                echo "Deploying \${BRANCH} to \${ENVIRONMENT}..."
+                echo "Testing \${BRANCH}..."
+            }
+        }
+        stage('Report Results') {
+            steps {
+                echo "Reporting results..."
             }
         }
     }
