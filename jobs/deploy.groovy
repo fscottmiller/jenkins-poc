@@ -3,15 +3,16 @@ def file = readFileFromWorkspace("pipelines/deploy.groovy")
 
 
 
-script = getter.getPipelineScript(file, binding.getVariables()['data'])
+pipelineScript = getter.getPipelineScript(file, binding.getVariables()['data'])
 
-println script
+println pipelineScript
+println pipelineScript.getClass()
 
 pipelineJob("${project}-Deploy") {
     displayName('Deploy')
     definition {
         cps { 
-            script(script)
+            script(pipelineScript)
         }
     }
 }
