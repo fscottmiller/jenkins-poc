@@ -12,7 +12,7 @@ def fixData(data) {
     }
 }
 
-def main(String file, Map vars) {
+def call(String file, Map vars) {
     fixData(vars)
 
     def engine = new SimpleTemplateEngine()
