@@ -16,7 +16,7 @@ def fixData(data) {
 def getPipelineScript(String file, Map vars) {
     println "----- function getPipelineScript -----"
     fixData(vars)
-    println file
+    println binding.getVariables()
     def script = new SimpleTemplateEngine().createTemplate(file).make(vars).toString()
     println "b"
     return script
