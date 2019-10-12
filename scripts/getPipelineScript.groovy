@@ -13,7 +13,7 @@ def fixData(data) {
     }
 }
 
-def getPipelineScript(String file, Map vars) {
+def getPipelineScript(String file, LinkedHashMap vars) {
     println "Workspace: ${WORKSPACE}"
     // def jfile = readFileFromWorkspace "pipelines/deploy.groovy"
     // fixData(vars)
