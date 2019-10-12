@@ -11,6 +11,8 @@ for (i in vars) {
     }
 }
 
+println vars['build']
+
 def engine = new SimpleTemplateEngine()
 template = engine.createTemplate(jfile).make(vars).toString()
 
