@@ -1,5 +1,6 @@
 evaluate(new File("../scripts/getPipelineScript.groovy"))
 
+
 script = getPipelineScript("pipelines/deploy.groovy", binding.getVariables()['data'])
 
 
