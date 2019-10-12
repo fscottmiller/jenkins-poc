@@ -1,0 +1,7 @@
+Sample:
+  repository: https://github.com/fscottmiller/jenkins-poc
+  environments:
+    - DEV
+    - QA
+    - UAT
+    - PROD 
