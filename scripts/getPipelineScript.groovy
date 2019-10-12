@@ -21,3 +21,5 @@ def getPipelineScript(String file, LinkedHashMap vars) {
     // return script
     return "x"
 }
+
+println "foo"
