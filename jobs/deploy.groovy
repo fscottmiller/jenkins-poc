@@ -25,6 +25,7 @@ fixParams(vars)
 //         i.value = i.value.collect{ "'$it'" }
 //     }
 // }
+println "------------------------------------------------------------------------------"
 for (i in vars) {
     println "${i.key} : ${i.value}"
 }
