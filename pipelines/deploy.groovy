@@ -8,7 +8,7 @@ pipeline {
     }
 
     parameters {
-        choice name: "ENVIRONMENT", choices: ${data['environments']}
+        choice name: "ENVIRONMENT", choices: environments
         string name: "BRANCH", defaultValue: "master"
     }
     stages {
