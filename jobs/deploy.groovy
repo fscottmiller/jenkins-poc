@@ -7,10 +7,14 @@ def vars = binding.getVariables()
 
 def fixData(data) {
     println "---- function fixParams -----"
-    println data.getClass()
-    if (data instanceof Collection) {
-        println "Iterating..."
-        // fixParams(i.value)
+    for (i in data) {
+        if (i.value instanceof Map) {
+            println "Iterating ${i.key}..."
+            fixData(i)
+        } if (i.value instanceof Collection) {
+            println "Fixing collection values"
+            i.value = i.value.collect{ "'$it'" }
+        }
     }
 }
 
