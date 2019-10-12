@@ -1,4 +1,4 @@
-Sample:
+Dev:
   repository: https://github.com/fscottmiller/jenkins-poc
   build:
     tool: npm
