@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                echo "Testing \${BRANCH}..."
+                echo "Testing \${params.BRANCH}..."
             }
         }
         stage('Report Results') {

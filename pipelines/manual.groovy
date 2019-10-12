@@ -10,8 +10,8 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                echo "Checking manual test results for \${BRANCH}..."
-                echo "The environment is \${ENVIRONMENT}"
+                echo "Checking manual test results for \${params.BRANCH}..."
+                echo "The environment is \${params.ENVIRONMENT}"
             }
         }
         stage('Report Results') {

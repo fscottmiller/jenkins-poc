@@ -11,7 +11,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo "Deployment type: "
-                echo "Deploying \${BRANCH} to \${ENVIRONMENT}..."
+                echo "Deploying \${params.BRANCH} to \${params.ENVIRONMENT}..."
             }
         }
     }

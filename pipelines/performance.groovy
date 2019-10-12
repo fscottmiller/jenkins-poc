@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                echo "Running performance tests from \${BRANCH} against \${ENVIRONMENT}..."
+                echo "Running performance tests from \${params.BRANCH} against \${params.ENVIRONMENT}..."
             }
         }
         stage('Report Results') {
