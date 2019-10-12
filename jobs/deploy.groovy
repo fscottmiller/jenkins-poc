@@ -1,12 +1,7 @@
 def getter = evaluate(readFileFromWorkspace("scripts/get2.groovy"))
 def file = readFileFromWorkspace("pipelines/deploy.groovy")
 
-
-
-pipelineScript = getter.getPipelineScript(file, binding.getVariables()['data'])
-
-println pipelineScript
-println pipelineScript.getClass()
+pipelineScript = getter(file, binding.getVariables()['data'])
 
 pipelineJob("${project}-Deploy") {
     displayName('Deploy')

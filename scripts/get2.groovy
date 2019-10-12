@@ -12,7 +12,7 @@ def fixData(data) {
     }
 }
 
-def getPipelineScript(String file, Map vars) {
+def main(String file, Map vars) {
     fixData(vars)
 
     def engine = new SimpleTemplateEngine()
