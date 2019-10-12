@@ -16,11 +16,11 @@ def vars = binding.getVariables()
 def engine = new SimpleTemplateEngine()
 template = engine.createTemplate(jfile).make(vars).toString()
 
-pipelineJob("${project}-Deploy") {
-    displayName('Deploy')
-    definition {
-        cps { 
-            script(template)
-        }
-    }
-}
+// pipelineJob("${project}-Deploy") {
+//     displayName('Deploy')
+//     definition {
+//         cps { 
+//             script(template)
+//         }
+//     }
+// }

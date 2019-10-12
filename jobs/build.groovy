@@ -18,11 +18,11 @@ for (i in vars) {
 def engine = new SimpleTemplateEngine()
 template = engine.createTemplate(jfile).make(vars).toString()
 
-pipelineJob("${project}-Build") {
-    displayName('Build')
-    definition {
-        cps { 
-            script(template)
-        }
-    }
-}
+// pipelineJob("${project}-Build") {
+//     displayName('Build')
+//     definition {
+//         cps { 
+//             script(template)
+//         }
+//     }
+// }
