@@ -7,7 +7,6 @@ pipeline {
                 script {
                     def yaml = readYaml file: 'config.yaml'
                     for (project in yaml.keySet()) {
-                        println "----- ${project} builing -----"
                         jobDsl targets: ['jobs/*.groovy'].join('\n'), 
                             additionalParameters: [
                                 project: project, 
