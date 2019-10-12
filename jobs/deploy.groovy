@@ -12,7 +12,7 @@ def fixParams(data) {
             fixParams(i.value)
         }
         else {
-            i.value = "'$it'"
+            i.value = "'${i.value}'"
         }
     }
 }
