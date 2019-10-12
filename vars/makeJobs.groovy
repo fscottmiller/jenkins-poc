@@ -2,7 +2,7 @@ import groovy.text.SimpleTemplateEngine
 
 def call(project, data) {
     fixData(data)
-    // makeEnvJobs(project, data)
+    makeJobs(project, data)
     // makeEnvJobs(project, data)
 }
 
