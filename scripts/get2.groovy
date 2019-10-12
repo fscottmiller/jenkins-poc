@@ -20,7 +20,7 @@ def getPipelineScript(String file, Map vars) {
     println(vars)
     println(vars.getClass())
     def script = new SimpleTemplateEngine().createTemplate(file).make(vars).toString()
-    println "b"
+    println script
     return script
 }
 
