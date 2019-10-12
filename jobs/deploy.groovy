@@ -5,6 +5,7 @@ def file = readFileFromWorkspace("pipelines/deploy.groovy")
 
 script = getter.getPipelineScript(file, binding.getVariables()['data'])
 
+println script
 
 pipelineJob("${project}-Deploy") {
     displayName('Deploy')

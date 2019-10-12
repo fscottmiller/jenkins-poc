@@ -1,7 +1,6 @@
 import groovy.text.SimpleTemplateEngine
 
 def fixData(data) {
-    println "-- function fixParams --"
     for (i in data) {
         if (i.value instanceof Map) {
             println "Iterating ${i.key}..."
@@ -14,14 +13,11 @@ def fixData(data) {
 }
 
 def getPipelineScript(String file, Map vars) {
-    println "----- function getPipelineScript -----"
     fixData(vars)
-    // println binding.getVariables()
-    println(vars)
-    println(vars.getClass())
+
     def engine = new SimpleTemplateEngine()
     def script = engine.createTemplate(file).make(vars).toString()
-    println script
+
     return script
 }
 
