@@ -15,11 +15,10 @@ def fixData(data) {
 
 def getPipelineScript(String file, LinkedHashMap vars) {
     println "Workspace: ${WORKSPACE}"
-    // def jfile = readFileFromWorkspace "pipelines/deploy.groovy"
-    // fixData(vars)
-    // def script = new SimpleTemplateEngine().createTemplate(jfile).make(vars).toString()
-    // return script
-    return "x"
+    def jfile = readFileFromWorkspace "pipelines/deploy.groovy"
+    fixData(vars)
+    def script = new SimpleTemplateEngine().createTemplate(jfile).make(vars).toString()
+    return script
 }
 
-println "foo"
+return this
