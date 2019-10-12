@@ -6,14 +6,9 @@ def jfile = readFileFromWorkspace "pipelines/deploy.groovy"
 def vars = binding.getVariables()
 
 def fixParams(data) {
-    for (i in data) {
-        if (i.value instanceof Collection) {
-            println "Iterating through ${i}..."
-            fixParams(i.value)
-        }
-        else {
-            i.value = "'${i.value}'"
-        }
+    if (data instanceof Collection) {
+        println "Iterating through ${data}..."
+        // fixParams(i.value)
     }
 }
 for (i in vars) {
