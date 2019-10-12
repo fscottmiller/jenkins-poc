@@ -11,8 +11,7 @@ pipeline {
                         jobDsl targets: ['jobs/*.groovy'].join('\n'), 
                             additionalParameters: [
                                 project: project, 
-                                environments: yaml[project]['environments'], 
-                                repository: yaml[project]['repository']
+                                data: yaml[project]
                             ],
                             removedJobAction: 'DELETE',
                             removedViewAction: 'DELETE'

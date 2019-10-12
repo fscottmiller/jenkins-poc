@@ -5,11 +5,11 @@ println "building deploy job..."
 def jfile = readFileFromWorkspace "pipelines/deploy.groovy"
 def vars = binding.getVariables()
 
-for (i in vars) {
-    if (i.value instanceof Collection) {
-        i.value = i.value.collect{ "'$it'" }
-    }
-}
+// for (i in vars) {
+//     if (i.value instanceof Collection) {
+//         i.value = i.value.collect{ "'$it'" }
+//     }
+// }
 
 
 
