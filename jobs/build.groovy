@@ -15,8 +15,8 @@ for (i in vars) {
     println "${i.key} : ${i.value}"
 }
 
-def engine = new SimpleTemplateEngine()
-template = engine.createTemplate(jfile).make(vars).toString()
+// def engine = new SimpleTemplateEngine()
+// template = engine.createTemplate(jfile).make(vars).toString()
 
 // pipelineJob("${project}-Build") {
 //     displayName('Build')

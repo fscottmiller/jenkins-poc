@@ -13,8 +13,8 @@ def vars = binding.getVariables()
 
 
 
-def engine = new SimpleTemplateEngine()
-template = engine.createTemplate(jfile).make(vars).toString()
+// def engine = new SimpleTemplateEngine()
+// template = engine.createTemplate(jfile).make(vars).toString()
 
 // pipelineJob("${project}-Deploy") {
 //     displayName('Deploy')
