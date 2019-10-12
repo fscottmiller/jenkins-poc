@@ -14,9 +14,8 @@ def fixData(data) {
 }
 
 def getPipelineScript(String file, Map vars) {
-    def jfile = readFileFromWorkspace file
     fixData(vars)
-    def script = new SimpleTemplateEngine().createTemplate(jfile).make(vars).toString()
+    def script = new SimpleTemplateEngine().createTemplate(file).make(vars).toString()
     return script
 }
 
