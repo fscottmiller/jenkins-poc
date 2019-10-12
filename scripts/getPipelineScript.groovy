@@ -14,7 +14,7 @@ class GetScript {
         }
     }
 
-    static String getPipelineScript(String file, Map vars) {
+    static String main(String file, Map vars) {
         def jfile = readFileFromWorkspace file
         fixData(vars)
         def script = new SimpleTemplateEngine().createTemplate(jfile).make(vars).toString()

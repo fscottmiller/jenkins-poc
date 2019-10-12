@@ -1,8 +1,8 @@
-get = evaluate(readFileFromWorkspace("scripts/get2.groovy"))
+evaluate(readFileFromWorkspace("scripts/getPipelineScript.groovy"))
 
 println "in deploy.groovy"
-file = readFileFromWorkspace("pipelines/deploy.groovy")
-script = get.getPipelineScript(file, binding.getVariables()['data'])
+script = GetScript("pipelines/deploy.groovy", binding.getVariables()['data'])
+
 
 pipelineJob("${project}-Deploy") {
     displayName('Deploy')
