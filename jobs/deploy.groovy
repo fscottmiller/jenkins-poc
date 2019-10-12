@@ -1,4 +1,4 @@
-evaluate(new File("../scripts/getPipelineScript.groovy"))
+evaluate(readFileFromWorkspace("scripts/getPipelineScript.groovy"))
 
 println "in deploy.groovy"
 
