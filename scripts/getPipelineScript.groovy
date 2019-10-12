@@ -1,5 +1,6 @@
 import groovy.text.SimpleTemplateEngine
 
+println "fixData"
 def fixData(data) {
     println "---- function fixParams -----"
     for (i in data) {
@@ -13,6 +14,7 @@ def fixData(data) {
     }
 }
 
+println "getPipelineScript"
 def getPipelineScript(String file, LinkedHashMap vars) {
     println "Workspace: ${WORKSPACE}"
     def jfile = readFileFromWorkspace "pipelines/deploy.groovy"
