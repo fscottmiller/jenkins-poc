@@ -18,6 +18,7 @@ def getPipelineScript(String file, Map vars) {
     fixData(vars)
     // println binding.getVariables()
     println(vars)
+    println(vars.getClass())
     def script = new SimpleTemplateEngine().createTemplate(file).make(vars).toString()
     println "b"
     return script
