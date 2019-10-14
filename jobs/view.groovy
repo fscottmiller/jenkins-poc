@@ -1,3 +1,5 @@
+// creates a view for the project
+
 listView("${project}") {
     jobFilters {
         regex {

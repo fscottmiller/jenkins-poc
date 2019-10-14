@@ -1,3 +1,6 @@
+// creates a build pipeline
+// should build the project and push to Artifactory
+
 def getScript = evaluate(readFileFromWorkspace("scripts/getPipelineScript.groovy"))
 
 def file = readFileFromWorkspace("pipelines/build.groovy")

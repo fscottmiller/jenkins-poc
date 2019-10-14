@@ -1,3 +1,5 @@
+// creates a manual testing pipeline
+
 def getScript = evaluate(readFileFromWorkspace("scripts/getPipelineScript.groovy"))
 
 def file = readFileFromWorkspace("pipelines/manual.groovy")

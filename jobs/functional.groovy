@@ -1,3 +1,5 @@
+// creates a functional testing pipeline
+
 def getScript = evaluate(readFileFromWorkspace("scripts/getPipelineScript.groovy"))
 
 def file = readFileFromWorkspace("pipelines/functional.groovy")

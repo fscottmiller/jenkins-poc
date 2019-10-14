@@ -1,3 +1,7 @@
+// creates a deploy pipeline
+// should deploy an existing package to an environment
+// coul simply trigger an Octopus job
+
 def getScript = evaluate(readFileFromWorkspace("scripts/getPipelineScript.groovy"))
 
 def file = readFileFromWorkspace("pipelines/deploy.groovy")
